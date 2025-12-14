@@ -929,10 +929,12 @@ export default function App() {
       {/* Game Over Screen */}
       {gameState === 'GAMEOVER' && (
         <div className="absolute inset-0 z-50 flex flex-col items-center justify-center bg-slate-900/90 backdrop-blur-sm">
-          <h2 className="text-6xl md:text-8xl font-black text-rose-500 mb-2 drop-shadow-[0_0_25px_rgba(244,63,94,0.6)]">
+          {/* Added text-center class to ensure H2 centers its content on mobile */}
+          <h2 className="text-6xl md:text-8xl font-black text-rose-500 mb-2 drop-shadow-[0_0_25px_rgba(244,63,94,0.6)] text-center px-4">
             MISSION ENDED
           </h2>
 
+          {/* Added text-center class here as well */}
           <div className="text-center mb-8">
             <div className="text-xl font-bold text-sky-400 mb-2">Pilot: {userName || 'Unknown Pilot'}</div>
             <div className="text-slate-400 text-xl mb-2">FINAL SCORE</div>
